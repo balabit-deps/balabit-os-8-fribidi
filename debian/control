@@ -1,7 +1,8 @@
 Source: fribidi
 Section: libs
 Priority: optional
-Maintainer: Debian Hebrew Packaging Team <team+hebrew@tracker.debian.org>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian Hebrew Packaging Team <team+hebrew@tracker.debian.org>
 Uploaders: Lior Kaplan <kaplan@debian.org>,
  Shachar Shemesh <shachar@debian.org>,
  أحمد المحمودي (Ahmed El-Mahmoudy) <aelmahmoudy@users.sourceforge.net>

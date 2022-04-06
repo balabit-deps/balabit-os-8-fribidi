@@ -1,3 +1,28 @@
+fribidi (1.0.8-2ubuntu0.1) focal-security; urgency=medium
+  
+  * SECURITY UPDATE: Incorrect length checking in processing of line input
+    could result in a stack buffer overflow, resulting in a crash or potential
+    code execution.
+    - debian/patches/CVE-2022-25308.patch: add checking to length of string
+      buffer before processing in bin/fribidi-main.c
+    - CVE-2022-25308
+
+  * SECURITY UPDATE: Insufficient sanitization of input data to the CapRTL
+    encoder could result in a heap buffer overflow, resulting in a crash or
+    potential code execution.
+    - debian/patches/CVE-2022-25309.patch: add checking and removal of
+      dangerous characters before encoding stage, in
+      lib/fribidi-char-sets-cap-rtl.c
+    - CVE-2022-25309
+
+  * SECURITY UPDATE: Incorrect handling of string pointer can result in a
+    crash in fribidi_remove_bidi_marks().
+    - debian/patches/CVE-2022-25310.patch: add checking for NULL strings, to avoid
+      potential use-after-free in lib/fribidi.c
+    - CVE-2022-25310
+
+ -- Ray Veldkamp <ray.veldkamp@canonical.com>  Wed, 06 Apr 2022 15:13:58 +1000
+
 fribidi (1.0.8-2) unstable; urgency=medium
 
   * Add  revert_log2vis_get_embedding_levels.diff patch to revert back 
